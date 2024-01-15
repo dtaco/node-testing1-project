@@ -160,7 +160,7 @@ class Car {
    */
   refuel(gallons) {
     const maxGallonsFit = this.tankSize - this.tank
-    if (gallons <= maxGallonsFit) {
+    if (this.tank + gallons <= maxGallonsFit) {
       this.tank = this.tank + gallons
     } else {
       this.tank = this.tankSize
